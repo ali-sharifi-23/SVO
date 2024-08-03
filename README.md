@@ -41,10 +41,12 @@ make
 ### g2o - General Graph Optimization OPTIONAL
 Only required if you want to run bundle adjustment. It is not necessary for visual odometry. In fact, we don't run it on our MAVs. g2o requires the following system dependencies: `cmake, libeigen3-dev, libsuitesparse-dev, libqt4-dev, qt4-qmake, libqglviewer-qt4-dev`, install them with `apt-get`.
 
-Install `g2o` from source:
+Install `g2o` from an out-of-source build:
 ```
-git clone https://github.com/RainerKuemmerle/g2o.git
-cd g2o
+cd workspace
+wget https://github.com/RainerKuemmerle/g2o/archive/refs/tags/20170730_git.tar.gz
+tar xvzf 20170730_git.tar.gz
+cd g2o-20170730_git
 mkdir build
 cd build
 cmake ..
